@@ -1,9 +1,7 @@
-let shouldKeepPlaying = false;
 const echos = document.querySelectorAll('.echo');
 const mainframe = document.getElementById('mainframe');
 
 mainframe.addEventListener('mouseenter', () => {
-  shouldKeepPlaying = true;
   pulseon();
 });
 
@@ -14,7 +12,6 @@ mainframe.addEventListener('mouseleave', () => {
       iterations: 1,
     });
   });
-  shouldKeepPlaying = false;
 });
 
 const pulseon = () => {
