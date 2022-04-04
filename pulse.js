@@ -1,19 +1,6 @@
 const echos = document.querySelectorAll('.echo');
 const mainframe = document.getElementById('mainframe');
 
-mainframe.addEventListener('mouseenter', () => {
-  pulseon();
-});
-
-mainframe.addEventListener('mouseleave', () => {
-  echos.forEach((echo) => {
-    let animation = echo.getAnimations()[0];
-    animation.effect.updateTiming({
-      iterations: 1,
-    });
-  });
-});
-
 const pulseon = () => {
   let delay = 0;
   echos.forEach((ele) => {
@@ -32,3 +19,18 @@ const pulseon = () => {
     delay += 0.5;
   });
 };
+
+mainframe.addEventListener('mouseenter', () => {
+  pulseon();
+});
+
+mainframe.addEventListener('mouseleave', () => {
+  echos.forEach((echo) => {
+    let animations = echo.getAnimations();
+    animations.forEach((animation) => {
+      animation.effect.updateTiming({
+        iterations: 1,
+      });
+    });
+  });
+});
