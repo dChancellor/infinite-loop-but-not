@@ -1,0 +1,82 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+svg {
+  position: absolute;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+#wheelux {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wheelSlice_container {
+  width: 50%;
+  height: 113%;
+  position: absolute;
+  pointer-events: none;
+}
+.wheelSlice_mouseRegion {
+  pointer-events: auto;
+  width: 100%;
+  height: 100%;
+}
+
+.slice_components {
+  position: relative;
+}
+
+.slice_components div {
+  pointer-events: none;
+}
+
+#wheelSlice_2 {
+  transform: rotate(45deg);
+}
+#wheelSlice_3 {
+  transform: rotate(90deg);
+}
+#wheelSlice_4 {
+  transform: rotate(135deg);
+}
+#wheelSlice_5 {
+  transform: rotate(180deg);
+}
+#wheelSlice_6 {
+  transform: rotate(225deg);
+}
+#wheelSlice_7 {
+  transform: rotate(270deg);
+}
+#wheelSlice_8 {
+  transform: rotate(315deg);
+}
+
+@keyframes slideOut {
+  from {
+    top: 0px;
+  }
+  to {
+    top: -20px;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    top: -20px;
+  }
+  to {
+    top: 0px;
+  }
+}
